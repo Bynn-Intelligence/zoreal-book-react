@@ -236,8 +236,9 @@ available.
 </button>
 ```
 
-The next `modal()` for the same link adopts the warmed frame, so the screens are
-already painted when the layer opens.
+The page and its data land in the browser's cache, so the layer's own frame,
+built on the click, loads from there and the times are on screen sooner. Call
+it on hover or focus of the button that opens the layer.
 
 ### Click-to-open from markup
 
