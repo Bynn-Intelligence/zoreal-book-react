@@ -131,6 +131,51 @@ Change `link` and the frame is replaced with the new one. Change `config` and
 the open frame is updated in place, which is a different thing entirely; see
 [Prefill](#prefill).
 
+## Where it goes
+
+**`<ZorealBook>` renders where you place it.** It is an ordinary component that
+mounts the booking screens inside its own `<div>`, so put it in the section,
+column or route that should hold the calendar, not in a layout's header or
+footer. The screens take the full width of the wrapper and size themselves to
+their own height; give the wrapper no fixed height and no scrolling.
+
+```tsx
+export function DemoSection() {
+  return (
+    <section className="book-a-demo">
+      <h2>Book a demo</h2>
+      <ZorealBook link="acme/kwm-drpt" />
+    </section>
+  );
+}
+```
+
+**A button opens the layer from anywhere.** Nothing renders until the click.
+The hook can be called in any component, however many of them there are, and
+the button keeps whatever styling it has. Carry a `source` in the metadata to
+tell bookings from this button apart in your Book dashboard.
+
+```tsx
+import { useZorealBook } from '@zoreal/book-react';
+
+export function BookDemoButton() {
+  const book = useZorealBook();
+  return (
+    <button
+      type="button"
+      onClick={() => book.modal({ link: 'acme/kwm-drpt', config: { metadata: { source: 'pricing_page' } } })}
+    >
+      Book a demo
+    </button>
+  );
+}
+```
+
+If the button is a link, keep the hosted address on it as the fallback for a
+visitor with scripts blocked, and let the click handler call
+`event.preventDefault()` before opening the layer. Markup-only triggers with
+`data-zoreal-book-link` work as well; see [Click-to-open from markup](#click-to-open-from-markup).
+
 ## ZorealBookProvider
 
 Optional. Wrap the part of your app that books and every embed under it shares
