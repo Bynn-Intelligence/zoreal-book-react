@@ -181,9 +181,12 @@ const modal = book.modal({ link: 'acme/kwm-drpt' });
 // modal.setConfig({ notes: 'From the pricing page' }) to update it in place
 ```
 
-The layer is closed by its close button, the backdrop, the Escape key, or the
-guest finishing. It is as tall as the booking screens and no taller, up to the
-height of the window; past that the layer scrolls, the frame never does. It is opened outside React's tree and belongs to the page, not
+The page dims and blurs, a ring turns until the times are there, and the
+booking card appears at its own size with the close in the corner of the window
+and the ZOREAL mark beneath it. Nothing of the SDK's is drawn around the card.
+It closes by the close button, the backdrop, the Escape key, or the guest
+finishing, and it is as tall as its content, up to the height of the window;
+past that the layer scrolls, the frame never does. It is opened outside React's tree and belongs to the page, not
 to the component that opened it: closing it is `close()`, not an unmount.
 
 ### A floating button
