@@ -615,7 +615,12 @@ place in a render tree.
 
 ## What your page needs to allow
 
-If you set a Content Security Policy, the embed needs one directive:
+Nothing, for most sites. The booking page is served so that any site may
+frame it, the way Cal.com's is, so there is no allowlist to join, no domain
+to register and no key to create. Install the package and it works.
+
+The one exception is a site that already sets a Content Security Policy. Then
+the frame needs one directive:
 
 ```
 frame-src   https://book.zoreal.com
