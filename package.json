@@ -39,7 +39,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@zoreal/book-js": "^0.0.1"
+    "@zoreal/book-js": "^0.1.0"
   },
   "peerDependencies": {
     "react": ">=18",

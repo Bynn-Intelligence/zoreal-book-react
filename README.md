@@ -169,7 +169,8 @@ const modal = book.modal({ link: 'acme/kwm-drpt' });
 ```
 
 The layer is closed by its close button, the backdrop, the Escape key, or the
-guest finishing. It is opened outside React's tree and belongs to the page, not
+guest finishing. It is as tall as the booking screens and no taller, up to the
+height of the window; past that the layer scrolls, the frame never does. It is opened outside React's tree and belongs to the page, not
 to the component that opened it: closing it is `close()`, not an unmount.
 
 ### A floating button
