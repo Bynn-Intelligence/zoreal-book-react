@@ -1,6 +1,6 @@
 {
   "name": "@zoreal/book-react",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "ZOREAL Book for React: the booking screens as a component, a hook, and click-to-open, on top of @zoreal/book-js.",
   "license": "MIT",
   "repository": {
