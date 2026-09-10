@@ -1,0 +1,62 @@
+{
+  "name": "@zoreal/book-react",
+  "version": "0.0.0",
+  "description": "ZOREAL Book for React: the booking screens as a component, a hook, and click-to-open, on top of @zoreal/book-js.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bynn-Intelligence/zoreal-book-react.git"
+  },
+  "homepage": "https://zoreal.com",
+  "keywords": [
+    "zoreal",
+    "book",
+    "booking",
+    "scheduling",
+    "appointments",
+    "calendar",
+    "react",
+    "embed"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@zoreal/book-js": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.2.5",
+    "jsdom": "^28.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
+  }
+}
